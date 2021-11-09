@@ -12,9 +12,17 @@ Now, select only the lines in `Rh_NC_sal_txm-all-noContam_GO-terms.tab` that cor
 
 This one we'll give you some help on - you can read in the list of contig names in bash, and work with each line in a loop using a structure like this:
 
+```
 while read line
 do
  echo $line
 done < \[INFILE_NAME\] 
+```
+
+...and another nice trick, the `tr` ("transform") command, which can swap one character for another - for example, newlines for semicolons:
+
+```
+tr ';' '\n' < INFILE > OUTFILE 
+```
 
 Now we should have a nice list of GO terms corresponding to (annotated) contigs with significantly different expression. What are they doing? As we've discussed in lecture, there are several ways to look at this. Here, we're just going to explore a little with an online visualization tool called Revigo. (http://revigo.irb.hr/) Surf on over, copy and paste your list of GO terms, and use the visual interface to explore the functional categories they cluster into.
