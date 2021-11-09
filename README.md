@@ -1,22 +1,8 @@
 # Lab_DE-Enrichment-Analysis
 
-## Get set up: copy the `DE_results.csv` you just created into this repo. Activate your `r_jupyter` conda environment, and spin up a Jupyter notebook:
+Get set up: copy the `DE_results.csv` you just created into this repo.
 
-```
-jupyter notebook --no-browser --port=8888
-```
+I've provided you with a files that "maps" each contig to a list of GO terms.
 
-...and connect locally:
-
-```
-ssh -N -f -L localhost:8888:localhost:8888 USERNAME@poseidon-[l1 or l2].whoi.edu
-```
-
-...and finally open in your browser:
-
-```
-localhost:8888
-```
-
-Open a new notebook in R.
+Use bash to find all contigs with padj < 0.05, and put the contig names into a new file called `DE_res_p05.txt`.
 
